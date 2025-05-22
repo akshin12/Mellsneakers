@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Mellsneakers – Магазин кроссовок</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: linear-gradient(180deg, #000 0%, #0e2e0e 100%);
+            color: #d8ffd8;
+            overflow-x: hidden;
+        }
+        header {
+            background: #001a00;
+            padding: 1em 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0,255,0,0.3);
+        }
+        header img {
+            width: 80px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #aaffaa;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #00ff88;
+        }
+        h1 {
+            color: #77ff77;
+        }
+        .hero {
+            padding: 2em;
+            text-align: center;
+            background: rgba(0, 50, 0, 0.3);
+            animation: fadeIn 2s ease;
+        }
+        .hero h2 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2em 1em;
+            animation: fadeIn 3s ease;
+        }
+        .product {
+            background: #122212;
+            margin: 1em;
+            padding: 1em;
+            border-radius: 8px;
+            width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #00ff88;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .product h2 {
+            font-size: 1.2em;
+            margin: 0.5em 0;
+        }
+        .product p {
+            margin: 0.5em 0;
+        }
+        button {
+            background: #00cc66;
+            color: white;
+            border: none;
+            padding: 0.7em 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #00ff88;
+        }
+        footer {
+            background: #001a00;
+            text-align: center;
+            color: #88cc88;
+            padding: 1em;
+            margin-top: 2em;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://via.placeholder.com/80x80.png?text=Кабан" alt="Логотип кабана">
+        <h1>Mellsneakers</h1>
+        <nav>
+            <a href="#">Главная</a>
+            <a href="#catalog">Каталог</a>
+            <a href="#contacts">Контакты</a>
+            <a href="#about">О нас</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Будь на стиле — будь с MELLSNEAKERS</h2>
+        <p>Ограниченные модели. Быстрая доставка. Настоящий характер.</p>
+    </section>
+
+    <div id="catalog" class="container">
+
+        <div class="product">
+            <img src="https://via.placeholder.com/250x200.png?text=Кроссовки+1" alt="Кроссовки 1">
+            <h2>Модель 1</h2>
+            <p>Цена: 5990 ₽</p>
+            <form action="https://securepay.tinkoff.ru/html/payForm" method="POST" target="_blank">
+                <input type="hidden" name="TerminalKey" value="DemoTerminal"> <!-- ЗАМЕНИ НА СВОЙ -->
+                <input type="hidden" name="Amount" value="599000">
+                <input type="hidden" name="OrderId" value="order_1">
+                <input type="hidden" name="Description" value="Кроссовки Модель 1">
+                <input type="hidden" name="SuccessURL" value="https://example.com/success">
+                <button type="submit">Купить</button>
+            </form>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x200.png?text=Кроссовки+2" alt="Кроссовки 2">
+            <h2>Модель 2</h2>
+            <p>Цена: 5990 ₽</p>
+            <form action="https://securepay.tinkoff.ru/html/payForm" method="POST" target="_blank">
+                <input type="hidden" name="TerminalKey" value="DemoTerminal"> <!-- ЗАМЕНИ НА СВОЙ -->
+                <input type="hidden" name="Amount" value="599000">
+                <input type="hidden" name="OrderId" value="order_2">
+                <input type="hidden" name="Description" value="Кроссовки Модель 2">
+                <input type="hidden" name="SuccessURL" value="https://example.com/success">
+                <button type="submit">Купить</button>
+            </form>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x200.png?text=Кроссовки+3" alt="Кроссовки 3">
+            <h2>Модель 3</h2>
+            <p>Цена: 5990 ₽</p>
+            <form action="https://securepay.tinkoff.ru/html/payForm" method="POST" target="_blank">
+                <input type="hidden" name="TerminalKey" value="DemoTerminal"> <!-- ЗАМЕНИ НА СВОЙ -->
+                <input type="hidden" name="Amount" value="599000">
+                <input type="hidden" name="OrderId" value="order_3">
+                <input type="hidden" name="Description" value="Кроссовки Модель 3">
+                <input type="hidden" name="SuccessURL" value="https://example.com/success">
+                <button type="submit">Купить</button>
+            </form>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x200.png?text=Кроссовки+4" alt="Кроссовки 4">
+            <h2>Модель 4</h2>
+            <p>Цена: 5990 ₽</p>
+            <form action="https://securepay.tinkoff.ru/html/payForm" method="POST" target="_blank">
+                <input type="hidden" name="TerminalKey" value="DemoTerminal"> <!-- ЗАМЕНИ НА СВОЙ -->
+                <input type="hidden" name="Amount" value="599000">
+                <input type="hidden" name="OrderId" value="order_4">
+                <input type="hidden" name="Description" value="Кроссовки Модель 4">
+                <input type="hidden" name="SuccessURL" value="https://example.com/success">
+                <button type="submit">Купить</button>
+            </form>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x200.png?text=Кроссовки+5" alt="Кроссовки 5">
+            <h2>Модель 5</h2>
+            <p>Цена: 5990 ₽</p>
+            <form action="https://securepay.tinkoff.ru/html/payForm" method="POST" target="_blank">
+                <input type="hidden" name="TerminalKey" value="DemoTerminal"> <!-- ЗАМЕНИ НА СВОЙ -->
+                <input type="hidden" name="Amount" value="599000">
+                <input type="hidden" name="OrderId" value="order_5">
+                <input type="hidden" name="Description" value="Кроссовки Модель 5">
+                <input type="hidden" name="SuccessURL" value="https://example.com/success">
+                <button type="submit">Купить</button>
+            </form>
+        </div>
+    
+    </div>
+
+    <section id="about" class="hero">
+        <h2>О нас</h2>
+        <p>Mellsneakers — это не просто обувь. Это вызов. Это свобода. Это стиль улиц и энергия города. Мы — про настоящие кроссы.</p>
+    </section>
+
+    <section id="contacts" class="hero">
+        <h2>Контакты</h2>
+        <p>Свяжись с нами: <br>Email: info@mellsneakers.ru<br>Telegram: @mellsneakers</p>
+    </section>
+
+    <footer>
+        &copy; 2025 Mellsneakers. Все права защищены.
+    </footer>
+</body>
+</html>
